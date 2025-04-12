@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/about.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="..." crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Ephesis&family=My+Soul&display=swap" rel="stylesheet">
+    <title>Pantropiko</title>
+</head>
+<body>
+    <div class="overlay">
+    <div class="navbar fade-in-on-load">
+        <div class="title">
+            <h2>Pantropiko</h2>
+        </div>
+        <div class="nav-links">
+            <a href="../html/homepage.html">Home</a>
+            <a href="../html/amenities.html">Amenities</a>
+            <a href="../html/roomrate.html">Room Rate</a>
+            <a href="../html/aboutus.html">About Us</a>
+        </div>
+        <div class="register">
+            <a href="../html/reserve.html">LogIn / SignIn</a>
+        </div>
+    </div>
+    <div id="about-section" class="fade-in">
+        <div class="dual-box-container">
+            <div class="content-box text-box">
+                <h2>Pantropiko – Your Tropical Escape</h2>
+                <p>At Pantropiko, we believe that paradise shouldn't be a dream — it should be your next destination. Nestled along the pristine coastline, our beach resort offers a perfect blend of relaxation, adventure, and island charm.</p>
+                <p>Whether you're looking to unwind under the sun, take a refreshing dip in our pools, or enjoy a variety of exciting amenities, Pantropiko is your home away from home. We’re dedicated to creating memorable experiences for families, couples, and groups, all wrapped in the soothing rhythm of the ocean breeze.</p>
+                <p>Come and experience the tropical lifestyle — where every moment feels like a vacation.</p>
+            </div>
+            <div class="content-box image-box">
+                <img src="../img/Pantropiko Survey.png" alt="QR CODE">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.3,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');  
+        }
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+   
+   </script>
+   </body>
+   </html>
