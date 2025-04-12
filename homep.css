@@ -296,7 +296,7 @@ h1 {
 #next-section3 {
     position: relative;
     height: 100vh;
-    background-image: url('../img/bgsection3.jpg'); 
+    background-image: url('bgsection3.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
